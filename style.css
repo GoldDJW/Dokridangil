@@ -23,9 +23,9 @@ body {
 }
 
 .answer-input {
-  width: 120px;
+  width: 180px;
   height: 120px;
-  font-size: 48px;
+  font-size: 36px;
   text-align: center;
   margin: 0 15px;
   border: 2px solid #4CAF50;
@@ -73,5 +73,11 @@ button:hover {
 #result {
   font-size: 36px;
   font-weight: bold;
+  margin-top: 20px;
+}
+
+.hint {
+  color: #ff0000;
+  font-style: italic;
   margin-top: 20px;
 }

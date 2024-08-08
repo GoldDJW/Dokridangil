@@ -3,19 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>유관순 일기</title>
+    <title>역사 퀴즈</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
+    <div class="container" id="question1">
         <h1>유관순 일기</h1>
         <p>빈칸을 채워주세요:</p>
         <div class="answer-inputs">
-            <input type="text" class="answer-input" id="input1" maxlength="2">
-            <input type="text" class="answer-input" id="input2" maxlength="2">
+            <input type="text" class="answer-input" id="input1-1" maxlength="2">
+            <input type="text" class="answer-input" id="input1-2" maxlength="2">
         </div>
-        <button onclick="checkAnswer()">제출</button>
+        <button onclick="checkAnswer(1)">제출</button>
+        <p id="hint1" class="hint"></p>
     </div>
+
+    <div class="container" id="question2" style="display: none;">
+        <h1>신문에서 빨간색 동그라미 친 부분을 입력하세요</h1>
+        <div class="answer-inputs">
+            <input type="text" class="answer-input" id="input2-1" maxlength="5">
+        </div>
+        <button onclick="checkAnswer(2)">제출</button>
+        <p id="hint2" class="hint"></p>
+    </div>
+
     <div id="popup" class="popup">
         <div class="popup-content">
             <p id="result"></p>
