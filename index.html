@@ -15,8 +15,12 @@
             <input type="text" class="answer-input" id="input2" maxlength="2">
         </div>
         <button onclick="checkAnswer()">제출</button>
-        <p id="result"></p>
-        <button id="okButton" onclick="resetForm()" style="display: none;">OK</button>
+    </div>
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <p id="result"></p>
+            <button onclick="closePopup()">OK</button>
+        </div>
     </div>
     <script src="script.js"></script>
 </body>
