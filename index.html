@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>유관순 일기</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>유관순 일기</h1>
+        <p>빈칸을 채워주세요:</p>
+        <div class="answer-inputs">
+            <input type="text" class="answer-input" id="input1" maxlength="2">
+            <input type="text" class="answer-input" id="input2" maxlength="2">
+        </div>
+        <button onclick="checkAnswer()">제출</button>
+        <p id="result"></p>
+        <button id="okButton" onclick="resetForm()" style="display: none;">OK</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
