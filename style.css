@@ -11,7 +11,7 @@ body {
 
 .container {
   background: #fff;
-  padding: 20px 40px; /* 패딩을 조정하여 위에 공간 확보 */
+  padding: 40px;
   border-radius: 15px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   text-align: center;
@@ -25,10 +25,7 @@ body {
   display: flex;
   justify-content: center;
   gap: 5px;  /* 버튼 간의 간격 */
-  margin-bottom: 0px;  /* 문제 위에 위치 */
-  padding: 0px 0;
-  background: #fff;
-  border-radius: 15px;
+  margin-top: 20px;  /* 제출 버튼 바로 아래 */
 }
 
 .quick-nav button {

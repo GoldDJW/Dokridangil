@@ -7,55 +7,57 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- 문제 바로가기 버튼 -->
-    <div class="quick-nav">
-        <button onclick="goToQuestion(1)">문제 1</button>
-        <button onclick="goToQuestion(2)">문제 2</button>
-        <button onclick="goToQuestion(3)">문제 3</button>
-        <button onclick="goToQuestion(4)">문제 4</button>
-        <button onclick="goToQuestion(5)">문제 5</button>
-    </div>
-
-    <div class="container" id="question1">
-        <h1>이봉창이 던진 폭탄은?</h1>
-        <p>빈칸을 채워주세요:</p>
-        <div class="answer-inputs">
-            <input type="text" class="answer-input" id="input1-1" maxlength="2">
-            <input type="text" class="answer-input" id="input1-2" maxlength="1">
-            <input type="text" class="answer-input" id="input1-3" maxlength="1">
+    <div class="container">
+        <div id="question1">
+            <h1>이봉창이 던진 폭탄은?</h1>
+            <p>빈칸을 채워주세요:</p>
+            <div class="answer-inputs">
+                <input type="text" class="answer-input" id="input1-1" maxlength="2">
+                <input type="text" class="answer-input" id="input1-2" maxlength="1">
+                <input type="text" class="answer-input" id="input1-3" maxlength="1">
+            </div>
+            <button onclick="checkAnswer(1)">제출</button>
         </div>
-        <button onclick="checkAnswer(1)">제출</button>
-    </div>
 
-    <div class="container" id="question2" style="display: none;">
-        <h1>유관순 일기를 읽고 빈칸을 채우시오</h1>
-        <p>빈칸을 채워주세요:</p>
-        <div class="answer-inputs">
-            <input type="text" class="answer-input" id="input2-1" maxlength="2">
-            <input type="text" class="answer-input" id="input2-2" maxlength="2">
+        <div id="question2" style="display: none;">
+            <h1>유관순 일기를 읽고 빈칸을 채우시오</h1>
+            <p>빈칸을 채워주세요:</p>
+            <div class="answer-inputs">
+                <input type="text" class="answer-input" id="input2-1" maxlength="2">
+                <input type="text" class="answer-input" id="input2-2" maxlength="2">
+            </div>
+            <button onclick="checkAnswer(2)">제출</button>
         </div>
-        <button onclick="checkAnswer(2)">제출</button>
-    </div>
 
-    <div class="container" id="question3" style="display: none;">
-        <h1>옷 주머니에 소지품을 확인하고 텐트로 들어가시오!</h1>
-        <div class="answer-inputs">
-            <input type="text" class="answer-input" id="input3-1" maxlength="4">
+        <div id="question3" style="display: none;">
+            <h1>옷 주머니에 소지품을 확인하고 텐트로 들어가시오!</h1>
+            <div class="answer-inputs">
+                <input type="text" class="answer-input" id="input3-1" maxlength="4">
+            </div>
+            <button onclick="checkAnswer(3)">제출</button>
         </div>
-        <button onclick="checkAnswer(3)">제출</button>
-    </div>
 
-    <div class="container" id="question4" style="display: none;">
-        <h1>안중근 의사가 이토히로부미를 사살한 사건?</h1>
-        <div class="answer-inputs">
-            <input type="text" class="answer-input wide-input" id="input4-1" maxlength="10">
+        <div id="question4" style="display: none;">
+            <h1>안중근 의사가 이토히로부미를 사살한 사건?</h1>
+            <div class="answer-inputs">
+                <input type="text" class="answer-input wide-input" id="input4-1" maxlength="10">
+            </div>
+            <button onclick="checkAnswer(4)">제출</button>
         </div>
-        <button onclick="checkAnswer(4)">제출</button>
-    </div>
 
-    <div class="container" id="question5" style="display: none;">
-        <h1>안중근 의사가 이토히로부미를 처단하기 위해 사용했던 총과 입장 시 받은 태극기를 확인하고 비밀상자를 여시오</h1>
-        <button onclick="checkAnswer(5)">확인</button>
+        <div id="question5" style="display: none;">
+            <h1>안중근 의사가 이토히로부미를 처단하기 위해 사용했던 총과 입장 시 받은 태극기를 확인하고 비밀상자를 여시오</h1>
+            <button onclick="checkAnswer(5)">확인</button>
+        </div>
+
+        <!-- 문제 바로가기 버튼 -->
+        <div class="quick-nav">
+            <button onclick="goToQuestion(1)">문제 1</button>
+            <button onclick="goToQuestion(2)">문제 2</button>
+            <button onclick="goToQuestion(3)">문제 3</button>
+            <button onclick="goToQuestion(4)">문제 4</button>
+            <button onclick="goToQuestion(5)">문제 5</button>
+        </div>
     </div>
 
     <div id="popup" class="popup">
