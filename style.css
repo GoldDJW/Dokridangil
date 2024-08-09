@@ -5,46 +5,64 @@ body {
   align-items: center;
   height: 100vh;
   margin: 0;
-  background-color: #f0f0f0;
+  background: linear-gradient(135deg, #f0f0f0, #e0e0e0);
 }
 
 .container {
-  background-color: white;
+  background: #fff;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  width: 80%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+h1 {
+  background: #1E90FF;
+  color: white;
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  text-align: center;
 }
 
 .answer-inputs {
   display: flex;
   justify-content: center;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
+  gap: 20px;
 }
 
 .answer-input {
-  width: 180px;
-  height: 120px;
-  font-size: 36px;
+  width: 100px;
+  height: 60px;
+  font-size: 24px;
   text-align: center;
-  margin: 0 15px;
+  margin: 0 10px;
   border: 2px solid #4CAF50;
   border-radius: 10px;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+  background-color: #f9f9f9;
+}
+
+.wide-input {
+  width: 300px;
 }
 
 button {
   font-size: 24px;
   padding: 15px 30px;
   margin: 15px;
-  background-color: #4CAF50;
+  background: linear-gradient(135deg, #4CAF50, #45a049);
   color: white;
   border: none;
   cursor: pointer;
-  border-radius: 5px;
+  border-radius: 10px;
+  transition: background 0.3s;
 }
 
 button:hover {
-  background-color: #45a049;
+  background: linear-gradient(135deg, #45a049, #4CAF50);
 }
 
 .popup {
@@ -56,17 +74,18 @@ button:hover {
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: rgba(0,0,0,0.4);
+  background: rgba(0, 0, 0, 0.5);
 }
 
 .popup-content {
-  background-color: #fefefe;
+  background: #fff;
   margin: 15% auto;
   padding: 20px;
   border: 1px solid #888;
   width: 80%;
   max-width: 500px;
-  border-radius: 10px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   text-align: center;
 }
 
