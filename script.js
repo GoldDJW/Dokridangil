@@ -3,15 +3,15 @@ const questions = [
     { answers: ['31', '빨간'] },   // 두 번째 질문: 유관순 일기
     { answers: ['1216'] },          // 세 번째 질문: 옷 주머니에 소지품 확인
     { answers: ['하얼빈의거'] },  // 네 번째 질문: 안중근 의사의 사건
-    { answers: ['0902'] }          // 다섯 번째 질문: 비밀상자
+    // 다섯 번째 질문은 정답 입력이 없으므로 생략
 ];
 
 const hints = [
-    "힌트: (첫번째 칸은 숫자 2자리.)", // 첫 번째 질문 힌트
+    "힌트: (힌트를 추가할 수 있습니다.)", // 첫 번째 질문 힌트
     "힌트: (밀랍인형을 자르면...)",      // 두 번째 질문 힌트
-    "힌트: (숫자 4자리)",  // 세 번째 질문 힌트
+    "힌트: (소지품을 다시 확인해 보세요.)",  // 세 번째 질문 힌트
     "힌트: (안중근 의사의 사형선고를 받은 달은 2월 이었다.)", // 네 번째 질문 힌트
-    "힌트: (총과 태극기를 다시 확인해 보세요)"     // 다섯 번째 질문 힌트
+    // 다섯 번째 질문은 힌트가 필요하지 않음
 ];
 
 let currentQuestion = 1;
@@ -23,14 +23,16 @@ function checkAnswer(questionNumber) {
     const popup = document.getElementById('popup');
 
     let isCorrect = true;
-    for (let i = 0; i < inputs.length; i++) {
-        if (inputs[i].value !== questions[questionNumber - 1].answers[i]) {
-            isCorrect = false;
-            break;
+    if (questionNumber !== 5) { // 5번째 질문은 정답 입력이 없음
+        for (let i = 0; i < inputs.length; i++) {
+            if (inputs[i].value !== questions[questionNumber - 1].answers[i]) {
+                isCorrect = false;
+                break;
+            }
         }
     }
 
-    if (isCorrect) {
+    if (isCorrect || questionNumber === 5) {
         resultElement.textContent = "정답";
         resultElement.style.color = "green";
         hintElement.textContent = "";
@@ -49,23 +51,17 @@ function closePopup() {
 
     const resultText = document.getElementById('result').textContent;
 
-    if (resultText === "정답") {
+    if (resultText === "정답" || currentQuestion === 5) {
         if (currentQuestion < 5) {
             document.getElementById(`question${currentQuestion}`).style.display = 'none';
             currentQuestion++;
             document.getElementById(`question${currentQuestion}`).style.display = 'block';
         } else {
-            // 모든 질문 완료 시 선택 팝업을 표시
-            showSelectionPopup();
+            goToQuestion(1); // 마지막 문제 확인 후 첫 번째 문제로 이동
         }
     }
 
     resetForm();
-}
-
-function showSelectionPopup() {
-    const selectionPopup = document.getElementById('selection-popup');
-    selectionPopup.style.display = 'block';
 }
 
 function goToQuestion(questionNumber) {

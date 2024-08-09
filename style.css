@@ -1,22 +1,49 @@
 body {
   font-family: Arial, sans-serif;
+  margin: 0;
+  background: linear-gradient(135deg, #f0f0f0, #e0e0e0);
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  margin: 0;
-  background: linear-gradient(135deg, #f0f0f0, #e0e0e0);
+  flex-direction: column;
 }
 
 .container {
   background: #fff;
-  padding: 40px;
+  padding: 20px 40px; /* 패딩을 조정하여 위에 공간 확보 */
   border-radius: 15px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   text-align: center;
   width: 80%;
   max-width: 800px;
   margin: 0 auto;
+  position: relative;
+}
+
+.quick-nav {
+  display: flex;
+  justify-content: center;
+  gap: 5px;  /* 버튼 간의 간격 */
+  margin-bottom: 0px;  /* 문제 위에 위치 */
+  padding: 0px 0;
+  background: #fff;
+  border-radius: 15px;
+}
+
+.quick-nav button {
+  padding: 10px 15px;
+  font-size: 16px;
+  background-color: #1E90FF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.quick-nav button:hover {
+  background-color: #1C86EE;
 }
 
 h1 {
@@ -24,6 +51,7 @@ h1 {
   color: white;
   padding: 20px;
   border-radius: 10px;
+  margin-top: 0;  /* 상단 여백 제거 */
 }
 
 .answer-inputs {
